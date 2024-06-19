@@ -1,7 +1,7 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
-import ArticlePreview from './components/ArticlePreview';
-import TagFilter from './components/TagFilter';
+import ArticlePreview from '../components/ArticlePreview';
+import TagFilter from '../components/Layout';
 import articlesData from './articlesData.json';
 
 function App() {
