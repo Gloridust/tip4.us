@@ -1,11 +1,16 @@
+// src/index.js
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
+import ArticlePage from './components/ArticlePage';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Switch>
+      <Route path="/" exact component={App} />
+      <Route path="/articles/:filename" component={ArticlePage} />
+    </Switch>
+  </Router>,
   document.getElementById('root')
 );

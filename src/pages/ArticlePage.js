@@ -1,6 +1,6 @@
 // src/pages/ArticlePage.js
 import React from 'react';
-import Article from '../components/Article';
+import Article from '../components/ArticlePage';
 
 const ArticlePage = () => {
   return (
