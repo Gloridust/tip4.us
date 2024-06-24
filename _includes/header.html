@@ -1,0 +1,15 @@
+<header>
+    <div class="logo">
+        <a href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }}">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="{{ '/' | relative_url }}">All</a></li>
+            {% for tag in site.tags %}
+            <li><a href="{{ '/tags/' | append: tag[0] | relative_url }}">{{ tag[0] }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

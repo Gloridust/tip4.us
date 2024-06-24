@@ -1,0 +1,86 @@
+/* assets/css/main.css */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+article {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+}
+
+.date, .tags {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.tags a {
+    background-color: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.post .content {
+    line-height: 1.8;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    text-align: center;
+}

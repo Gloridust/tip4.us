@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<h1>Tag: {{ page.tag }}</h1>
+
+<div class="articles">
+    {% for post in site.tags[page.tag] %}
+    <article>
+        <img src="{{ post.cover }}" alt="{{ post.title }}">
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        <p class="date">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p class="description">{{ post.description }}</p>
+    </article>
+    {% endfor %}
+</div>
