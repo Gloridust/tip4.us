@@ -95,7 +95,7 @@ twitter:
   username: yourtwitterhandle
   card: summary
 
-logo: /path/to/your/logo.png
+logo: /assets/src/logo.png
 
 social:
   name: Your Name

@@ -54,6 +54,18 @@ article img {
     height: auto;
 }
 
+.article-preview-image {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.post-cover-image {
+    max-width: 100%;
+    height: auto;
+}
+
 .date, .tags {
     font-size: 0.9em;
     color: #666;
