@@ -70,18 +70,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
       type: "tags"
     values:
       layout: "tag"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
 
 # 插件
 plugins:
