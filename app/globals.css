@@ -4,10 +4,12 @@
 
 :root {
   --primary-color: #3498db;
-  --secondary-color: #2ecc71;
+  --secondary-color: #f39c12;
   --background-color: #f8f9fa;
   --text-color: #2c3e50;
   --card-background: #ffffff;
+  --tag-background: #e0e0e0;
+  --tag-text: #555555;
 }
 
 body {
@@ -29,8 +31,8 @@ body {
 }
 
 .tag {
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--tag-background);
+  color: var(--tag-text);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.8rem;
@@ -38,7 +40,8 @@ body {
 }
 
 .tag:hover {
-  opacity: 0.8;
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 .image-container {

@@ -27,7 +27,15 @@ export default function TagPage({ params }: { params: { tag: string } }) {
             All
           </Link>
           {allTags.map((tag) => (
-            <Link key={tag} href={`/tag/${tag}`} className={`tag ${tag === params.tag ? 'bg-primary-color' : ''}`}>
+            <Link 
+              key={tag} 
+              href={`/tag/${tag}`} 
+              className={`tag ${
+                tag === params.tag 
+                  ? 'bg-secondary-color text-white' 
+                  : ''
+              }`}
+            >
               {tag}
             </Link>
           ))}

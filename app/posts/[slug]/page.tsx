@@ -12,7 +12,9 @@ export default async function Post({ params }: { params: { slug: string } }) {
 
   return (
     <div className="max-w-3xl mx-auto p-8">
-      <Link href="/" className="text-primary-color hover:underline mb-8 inline-block">&larr; Back to home</Link>
+      <Link href="/" className="text-primary-color hover:underline mb-8 inline-block">
+        &larr; Back to home
+      </Link>
       <article className="card p-8">
         <h1 className="text-4xl font-bold mb-4">{postData.title}</h1>
         <p className="text-gray-600 mb-4">{postData.date}</p>
