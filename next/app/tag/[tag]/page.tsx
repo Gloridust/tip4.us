@@ -1,27 +1,33 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import { getSortedPostsData, getAllTags } from '../utils/mdUtils'
+import Image from 'next/image'
+import { getSortedPostsData, getAllTags } from '../../../utils/mdUtils'
 
-export default function Home() {
-  const posts = getSortedPostsData()
+export async function generateStaticParams() {
   const tags = getAllTags()
+  return tags.map((tag) => ({
+    tag: tag,
+  }))
+}
+
+export default function TagPage({ params }: { params: { tag: string } }) {
+  const posts = getSortedPostsData().filter((post) => post.tags.includes(params.tag))
+  const allTags = getAllTags()
 
   return (
     <main className="min-h-screen p-8 max-w-6xl mx-auto">
-      <header className="mb-12 text-center">
-        <Image src="/images/logo.png" alt="tip4.us Logo" width={150} height={50} className="mx-auto mb-4" />
-        <h1 className="text-4xl font-bold mb-2">tip4.us</h1>
-        <p className="text-xl text-gray-600">Share tips for us</p>
+      <header className="mb-12">
+        <Link href="/" className="text-primary-color hover:underline mb-4 inline-block">&larr; Back to home</Link>
+        <h1 className="text-4xl font-bold mt-4">Posts tagged with &quot;{params.tag}&quot;</h1>
       </header>
 
       <div className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4 text-center">Explore Topics</h2>
-        <div className="flex flex-wrap justify-center gap-2">
+        <h2 className="text-2xl font-semibold mb-4">All Tags</h2>
+        <div className="flex flex-wrap gap-2">
           <Link href="/" className="tag">
             All
           </Link>
-          {tags.map((tag) => (
-            <Link key={tag} href={`/tag/${tag}`} className="tag">
+          {allTags.map((tag) => (
+            <Link key={tag} href={`/tag/${tag}`} className={`tag ${tag === params.tag ? 'bg-primary-color' : ''}`}>
               {tag}
             </Link>
           ))}
