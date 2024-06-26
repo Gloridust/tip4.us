@@ -37,7 +37,14 @@ export default function TagPage({ params }: { params: { tag: string } }) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
           <Link key={post.slug} href={`/posts/${post.slug}`} className="card">
-            <Image src={post.cover} alt={post.title} width={400} height={200} className="w-full h-48 object-cover rounded-t-lg" />
+            <div className="image-container rounded-t-lg"> {/* 应用新的类 */}
+              <Image 
+                src={post.cover} 
+                alt={post.title} 
+                fill
+                className="rounded-t-lg"
+              />
+            </div>
             <div className="p-6">
               <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
               <p className="text-gray-600 text-sm mb-2">{post.date}</p>
