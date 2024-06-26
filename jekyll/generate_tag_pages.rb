@@ -16,6 +16,7 @@ tags.each do |tag|
   File.open("_tags/#{tag}.md", 'w') do |file|
     file.puts "---"
     file.puts "layout: tag"
+    file.puts "title: \"Tag: #{tag}\""
     file.puts "tag: #{tag}"
     file.puts "---"
   end

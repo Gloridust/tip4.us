@@ -10,9 +10,9 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">Tags</a>
                 <div class="dropdown-content">
-                    {% assign tags = site.posts | map: 'tags' | uniq %}
+                    {% assign tags = site.posts | map: 'tags' | flatten | uniq | sort %}
                     {% for tag in tags %}
-                        <a href="{{ '/tags/' | append: tag | relative_url }}">{{ tag }}</a>
+                        <a href="{{ '/tags/' | append: tag | downcase | relative_url }}">{{ tag }}</a>
                     {% endfor %}
                 </div>
             </li>

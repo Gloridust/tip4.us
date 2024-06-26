@@ -60,17 +60,23 @@ exclude:
 include:
   - _pages
 
+plugins_dir: _plugins
+
 # 集合设置
 collections:
   tags:
     output: true
     permalink: /tags/:name/
 
-# 默认布局设置
 defaults:
   - scope:
       path: ""
-      type: "tags"
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: "tags"
+      type: "pages"
     values:
       layout: "tag"
 
@@ -78,8 +84,7 @@ defaults:
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
-  # - jekyll-feed
-  # - jekyll-paginate
+  - jekyll-paginate
 
 # SEO 相关设置
 twitter:
