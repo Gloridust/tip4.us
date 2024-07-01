@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="min-h-screen p-8 max-w-6xl mx-auto">
       <header className="mb-12 text-center">
-        <Image src="/images/logo.png" alt="tip4.us Logo" width={150} height={50} className="mx-auto mb-4" />
+        <Image src="/images/logo.webp" alt="tip4.us Logo" width={150} height={50} className="mx-auto mb-4" />
         <h1 className="text-4xl font-bold mb-2">tip4.us</h1>
         <p className="text-xl text-gray-600">Share tips for us</p>
       </header>

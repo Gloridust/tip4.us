@@ -3,7 +3,7 @@ title: '示例文章'
 date: '2024-06-27'
 description: '这是一篇示例文章，用于测试我们的博客系统。'
 tags: ['example', 'Markdown']
-cover: '/images/logo.png'
+cover: '/images/logo.webp'
 ---
 
 # 欢迎来到我的博客
