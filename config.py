@@ -4,4 +4,4 @@
 GIT_REPO_PATH = "/path/to/your/git/repository"
 
 # Git 提交信息模板
-GIT_COMMIT_MESSAGE = "新增文章: {filename}"
+GIT_COMMIT_MESSAGE = "New post: {filename}"
