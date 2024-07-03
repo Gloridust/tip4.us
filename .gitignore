@@ -37,3 +37,4 @@ next-env.d.ts
 
 # Server
 __pycache__/
+config.py
