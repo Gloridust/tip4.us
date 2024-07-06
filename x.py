@@ -77,7 +77,8 @@ def parse_tweet(tweet_url):
         "images": images
     }
 
-# 使用示例
-tweet_url = "https://x.com/lagguydesign/status/1808674590568178139"
-result = parse_tweet(tweet_url)
-print(json.dumps(result, indent=2))
+
+if __name__ == "__main__":
+    tweet_url = "https://x.com/lagguydesign/status/1808674590568178139"
+    result = parse_tweet(tweet_url)
+    print(json.dumps(result, indent=2))
